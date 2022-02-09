@@ -1,3 +1,4 @@
+/* Using CSS from my original portfolio that is linked in the readme */
 .App {
   text-align: center;
 }
@@ -35,4 +36,244 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+:root {
+  --navBackgroundColor: rgb(0, 71, 99);
+  --navTextColor: rgb(177, 237, 255);
+  --backgroundColor: #d3d6d0;
+  --nameColor: #ff7c25;
+  --textColor: rgb(0, 38, 53);
+}
+
+/* Set box style, padding, and margin */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set the background color of the body */
+body 
+{
+  background-color: var(--backgroundColor);
+}
+
+/* Set the header's padding size, fonts, background color, and color of the header itself */
+header 
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem, 1rem;
+  padding: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--navBackgroundColor);
+  color: var(--nameColor);
+  align-items: flex-end;
+}
+
+/* Set the header h1 tag's display style and font size */
+header h1 
+{
+  position: absolute;
+  left: 2%;
+  top: 1%;
+  font-size: 2.5rem;
+}
+
+/* Set everything within the navigation bar to have a padding size, margin size, font family, font size, and set where the box floats */
+header nav 
+{
+  float: right;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  bottom: 1%;
+  padding-top: 0.5rem;
+  margin-right: 0.5rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Set the list type to be none */
+header nav ul 
+{
+  list-style-type: none;
+}
+
+/* Set the lists display and margin size */
+header nav ul li 
+{
+  display: inline-block;
+  margin-left: 1rem;
+  text-decoration-line: overline;
+  text-decoration-thickness: 0.25rem;
+}
+
+/* Set the color and text decoration of the words within the nav's list */
+header nav ul li a 
+{
+  color: var(--navTextColor);
+  text-decoration: none;
+}
+
+/* Set the h2's font size, color, weight, underline offset, and space between the underline */
+h2
+{
+  font-size: 2rem;
+  font-weight: bolder;
+  text-decoration-line: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.3rem;
+  border-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  color: var(--textColor);
+}
+
+/* Set the h3's color and font weight */
+h3
+{
+  color: var(--textColor);
+  font-weight: lighter;
+}
+
+/* Set the paragraph's font size and color*/
+p 
+{
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+/* Set the background pic's image, size, postion, and margin*/
+.background-pic 
+{
+  background-image: url("../images/sunrise_sunset.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 10rem;
+}
+
+/* Set the style type to none as to get rid of the bullet points */
+.contact-info ul 
+{
+  list-style-type: none;
+}
+
+/* Make the list all line up with an underline and evenly space */
+.contact-info ul li
+{
+  display: inline-block;
+  margin-left: 3rem;
+  text-decoration-line: underline;
+  text-underline-offset: 0.25rem;
+  color: var(--textColor);
+  font-size: 1.5rem;
+}
+
+/* Make the linkedin hyperlink inherit the text color of the others in the list */
+.contact-info ul li a
+{
+  color: inherit;
+}
+
+/* Make the list all line up with an underline and evenly space */
+#my-resume a
+{
+  display: inline-block;
+  margin-left: 3rem;
+  text-decoration-line: underline;
+  text-underline-offset: 0.25rem;
+  color: var(--textColor);
+  font-size: 1.5rem;
+}
+
+/* Set the main boxes parameters */
+.boxes-row
+{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+margin-left: -1.5rem;
+margin-right: -1.5rem;
+}
+
+/* Set the boxes to be centered */
+.justify-center 
+{
+  justify-content: center;
+}
+
+/* Set the boxes padding alignment, border stule, and width */
+.box-column 
+{ 
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+/*  */
+.work-boxes
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 2rem;
+  outline: 2px dashed var(--nameColor);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Set the cards padding background color and text color */
+.work-boxes .box-header 
+{
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #33393f;
+  color: var(--nameColor);
+  border: 2px solid var(--backgroundColor);
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.work-boxes:hover,
+.work-boxes:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--nameColor), 0 0 15px var(--nameColor);
+}
+
+.work-boxes {
+  flex-grow: 1;
+}
+
+/* Set the images width */
+.work-boxes img 
+{
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+    display: flex;
+    align-items: center;
+}
+
+.work-boxes img:active {
+  user-select: all;
+}
+
+/* Center align the footer */
+footer 
+{
+  text-align: center;
+}
+
+/* Set the footer's P tag to have a lighter font weight and set the font size */
+footer p
+{
+  font-size: 1rem;
+  font-weight: lighter;
 }
