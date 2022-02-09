@@ -147,7 +147,7 @@ p
 /* Set the background pic's image, size, postion, and margin*/
 .background-pic 
 {
-  background-image: url("../images/sunrise_sunset.png");
+  background-image: url("./components/aboutMe/assets/sunrise_sunset.png");
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
